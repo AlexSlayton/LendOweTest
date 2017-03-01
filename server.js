@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var app      = express();
 var port     = process.env.PORT || 8080;
-
+var path     = require("path");
 var passport = require('passport');
 var flash    = require('connect-flash');
 
@@ -29,9 +29,11 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // Static page
-app.use(express.static("./public"));
+// app.use(express.static(__dirname+"./public"));
+// app.use(express.static(__dirname+"./vendor"));
 
-app.set('view engine', 'ejs'); // set up ejs for templating
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'vendor')));
 
 // required for passport
 app.use(session({
@@ -45,7 +47,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 
 // routes ======================================================================
-require('./routes/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+require('./routes/html-routes.js')(app, passport);
 
 // launch ======================================================================
 app.listen(port);
