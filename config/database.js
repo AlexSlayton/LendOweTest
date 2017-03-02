@@ -3,8 +3,8 @@ module.exports = {
     'connection': {
         'host': 'localhost',
         'user': 'root',
-        'password': 'maury210'
+        'password': '****'
     },
-	'database': 'my_schema',
+	'database': 'lendowe_db',
     'users_table': 'users'
 };
