@@ -6,6 +6,8 @@
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  background: url(../assets/img/shiplap.png);
+  background-repeat: no-repeat;
 }
 p {
   font-size: 20px;
@@ -18,7 +20,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #18BC9C;
+  color: none !important;
   outline: none;
 }
 h1,
@@ -143,9 +145,17 @@ header .intro-text .skills {
   font
 }
 
+#lend-section {
+  margin-top: 150px;
+}
 
+#owe-section {
+  margin-top: 150px;
+}
 
-
+#login-section {
+  margin-top: 150px;
+}
 
 @media (min-width: 768px) {
   header .container {

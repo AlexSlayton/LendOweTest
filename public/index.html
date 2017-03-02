@@ -12,10 +12,10 @@
     <title>LendOwe</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="./css/freelancer.css" rel="stylesheet">
+    <link href="css/freelancer.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -37,7 +37,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">LendOwe</a>
+                <a class="navbar-brand" href="/">LendOwe</a>
             </div>
 
             
@@ -46,13 +46,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="#page-top"></a>
+                        <a href="/"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Lend</a>
+                        <a href="lend">Lend</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">Owe</a>
+                        <a href="owe">Owe</a>
                     </li>
                     <li class="page-scroll">
                         <a href="login">Login</a>
@@ -82,14 +82,16 @@
                 <div class="container">
                 <div class="col-lg-6">
                     <p>
-                         <button id="uom" type="button" class="btn btn-block btn-default btn-lg">Lend<span class="glyphicon glyphicon-hand-right"></span></button>
+                         <a href="lend">
+                            <button id="uom" type="button" class="btn btn-block btn-default btn-lg">Lend<span class="glyphicon glyphicon-hand-right"></span></button>
+                         </a>
                     </p>
                 </div>
                 <div class="col-lg-6">
                      <p>
-                         <button id="iou" type="button" class="btn btn-block btn-default btn-lg"><span class="glyphicon glyphicon-hand-left"></span>Owe</button>
-
-                         
+                         <a href="owe">
+                            <button id="iou" type="button" class="btn btn-block btn-default btn-lg"><span class="glyphicon glyphicon-hand-left"></span>Owe</button>
+                         </a>   
                     </p>
                 </div>
                     
@@ -104,10 +106,10 @@
 
     <!-- Footer -->
     <footer class="text-center">
-        <div class="footer-above">
+<!--         <div class="footer-above">
             <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
+                <div class="row"> -->
+<!--                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
                         <p>Houston, TX 77450</p>
                     </div>
@@ -130,14 +132,14 @@
                                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
+                    </div> -->
+<!--                     <div class="footer-col col-md-4">
                         <h3>About</h3>
                         <p>A project by Tony, Alex, Alicia!</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="footer-below">
             <div class="container">
                 <div class="row">
@@ -174,7 +176,7 @@
     <script src="js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="../js/freelancer.min.js"></script>
+    <script src="js/freelancer.min.js"></script>
 
 </body>
 
