@@ -18,8 +18,6 @@ var flash    = require('connect-flash');
 
 require('./config/passport')(passport); // pass passport for configuration
 
-
-
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
@@ -28,12 +26,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-// Static page
-// app.use(express.static(__dirname+"./public"));
-// app.use(express.static(__dirname+"./vendor"));
-
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'vendor')));
+// static pages
+app.use(express.static(path.join(__dirname, './public')));
 
 // required for passport
 app.use(session({
