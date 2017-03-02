@@ -37,28 +37,21 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname + "/../public/index.html"));
   });
 
-  //   // show the signup form
-  // app.get('/signup', function(req, res) {
-  //   // render the page and pass in any flash data if it exists
-  //   res.render('signup.ejs', { message: req.flash('signupMessage') });
-  // });
+  // show the signup form
+  app.get("/signup", function(req, res) {
+  // render the page and pass in any flash data if it exists
+    res.sendFile(path.join(__dirname + "/../public/signup.html"));
+  });
 
-  // // process the signup form
-  // app.post('/signup', passport.authenticate('local-signup', {
-  //   successRedirect : '/profile', // redirect to the secure profile section
-  //   failureRedirect : '/signup', // redirect back to the signup page if there is an error
-  //   failureFlash : true // allow flash messages
-  // }));
-  
 };
 
-// // route middleware to make sure
-// function isLoggedIn(req, res, next) {
+// route middleware to make sure
+function isLoggedIn(req, res, next) {
 
-//   // if user is authenticated in the session, carry on
-//   if (req.isAuthenticated())
-//     return next();
+  // if user is authenticated in the session, carry on
+  if (req.isAuthenticated())
+    return next();
 
-//   // if they aren't redirect them to the home page
-//   res.redirect('/');
-// }
+  // if they aren't redirect them to the home page
+  res.redirect('/');
+}

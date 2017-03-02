@@ -144,19 +144,18 @@ header .intro-text .skills {
   font-weight: bold;
   font
 }
-
 #lend-section {
   margin-top: 150px;
 }
-
 #owe-section {
   margin-top: 150px;
 }
-
 #login-section {
   margin-top: 150px;
 }
-
+#Sign-Up-section {
+  margin-top: 150px;
+}
 @media (min-width: 768px) {
   header .container {
     padding-top: 100px;
