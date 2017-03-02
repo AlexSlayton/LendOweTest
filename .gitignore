@@ -2,4 +2,6 @@ node_modules
 
 holdingFile 
 
-guldfile.js
+gulpfile.js
+
+.DS_Store
