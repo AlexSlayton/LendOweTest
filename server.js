@@ -43,7 +43,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
 require('./routes/html-routes.js')(app, passport);
-
+require('./routes/lendowe-api-routes.js')(app, passport);
 // sync
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
