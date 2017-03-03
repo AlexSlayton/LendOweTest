@@ -7,6 +7,8 @@ module.exports = function(app) {
 		var query = {};
 		if(req.query.lenderId) {
 			query.lenderId = req.query.lenderId;
+		} else if (req.query.borrowerId) {
+			query.borrowerId = req.query.borrowerId;
 		}
 		db.Item.findAll({
 			where: query
@@ -17,11 +19,7 @@ module.exports = function(app) {
 
 	// To post a new item.
 	app.post("/api/items", function(req, res) {
-		db.Item.create({
-			name: req.body.name,
-			email: req.body.email,
-			message: req.body.message
-		}).then(function(dbItem) {
+		db.Item.create(req.body).then(function(dbItem) {
 			res.json(dbItem);
 		});
 	});
