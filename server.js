@@ -8,10 +8,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var app      = express();
-var port     = process.env.PORT || 8080;
+var PORT     = process.env.PORT || 8080;
 var path     = require("path");
 var passport = require('passport');
 var flash    = require('connect-flash');
+var db 	     = require("./models");
 
 // configuration ===============================================================
 // connect to our database
@@ -43,6 +44,9 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 // routes ======================================================================
 require('./routes/html-routes.js')(app, passport);
 
-// launch ======================================================================
-app.listen(port);
-console.log('The magic happens on port ' + port);
+// sync
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});
