@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       }, 
     });
-    // {
+  //   {
   //     // We're saying that we want our Author to have Posts
   //     classMethods: {
   //       associate: function(models) {

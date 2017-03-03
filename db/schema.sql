@@ -12,7 +12,7 @@ CREATE TABLE `Users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
-CREATE TABLE `items` (
+CREATE TABLE `Items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `message` varchar(255) NOT NULL,
   `createdAt` datetime NOT NULL,
@@ -28,6 +28,7 @@ CREATE TABLE `items` (
 
 CREATE TABLE `LenderBorrowers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,

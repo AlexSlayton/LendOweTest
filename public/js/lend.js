@@ -11,7 +11,7 @@ $(document).ready(function() {
 	var url = window.location.search;
 	var lenderId;
 	var borrowerId;
-
+	
   function getItems() {
   	$.get("/api/items", function(data) {
   		console.log("Items", data);
