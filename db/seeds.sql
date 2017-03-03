@@ -1,4 +1,7 @@
 USE lendowe_db;
+TRUNCATE TABLE Items;
+TRUNCATE TABLE LenderBorrowers;
+TRUNCATE TABLE Users;
 
 INSERT INTO Users SET
 email = 't.truong2009@gmail.com',
@@ -26,8 +29,8 @@ createdAt = NOW(),
 updatedAt = NOW();
 
 INSERT INTO LenderBorrowers SET
-name = 'Tony',
-email = 't.truong2009@gmail.com',
+name = 'Michelle',
+email = 'nguyen.x.michelle@gmail.com',
 createdAt = NOW(),
 updatedAt = NOW(),
 UserId = (SELECT id FROM Users WHERE email = 'nguyen.x.michelle@gmail.com');
