@@ -3,8 +3,11 @@ $(document).ready(function() {
 	var newItemName = $("#name");
 	var newItemEmail = $("#email");
 	var newItemDescription = $("#message");
+
 	// Our new items will go inside the borrower's table dynamically.
 	var itemsContainer = $("#borrower-table");
+
+	$(document).on("submit", "#userForm", insertItem);
 
 	getItems();
 
@@ -31,13 +34,30 @@ $(document).ready(function() {
 	// This function constructs a todo-item row
 	function createNewRow(items) {
 		var newInputRow = $("<tr>");
-		newInputRow.append("<td>" + items.name + "</td><td>" + items.email + "</td><td>" + items.message + "</td><td>" + items.createdAt + "</td>");
+		newInputRow.append("<td>" + items.lender.name + "</td><td>" + items.lender.email + "</td><td>" + items.message + "</td><td>" + items.createdAt + "</td>");
 
 		return newInputRow;
 	}
 
+	// This function updates an item in our database
 
+	function insertItem(event) {
+		event.preventDefault();
+		var items = {
+			name: newItemName.val().trim(),
+			email: newItemEmail.val().trim(),
+			message: newItemDescription.val().trim(),
+			lenderId: lenderId,
+			borrowerId: borrowerId	
+		};
 
+		console.log(items);
+		// Posting the new Items into the database, calling getItems when done 
+		$.post("/api/items", items, function() {
+			getItems();
+		});
+
+	}
 
 	 // 	var newInputRow = $("<li>");
 	 // 	newInputRow.addClass("list-group-item todo-item");

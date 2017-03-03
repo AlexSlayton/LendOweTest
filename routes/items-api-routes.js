@@ -12,7 +12,7 @@ module.exports = function(app) {
 		}
 		db.Item.findAll({
 			where: query,
-			include: [db.LenderBorrower]
+			include: [{model: db.LenderBorrower, as: "lender"}, {model: db.LenderBorrower, as: "borrower"}]
 		}).then(function(dbItem) {
 			res.json(dbItem);	
 		});
