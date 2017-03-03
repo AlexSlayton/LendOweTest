@@ -6,17 +6,15 @@ $(document).ready(function() {
 	// Our new items will go inside the borrower's table dynamically.
 	var itemsContainer = $("#borrower-table");
 
-	// Initial items array.
-	var items;
-
 	getItems();
 
 	// This funtion resets the items displayed with new items from the database.
-	function initilizeRows() {
+	function initilizeRows(items) {
 		newItemDescription.empty();
+		newItemName.empty();
+		newItemEmail.empty();
 		var rowsToAdd =[];
 		for (var i = 0; i < items.length; i++) {
-			// CreateNewRow function needs to be created.
 			rowsToAdd.push(createNewRow(items[i]));
 		}
 		itemsContainer.prepend(rowsToAdd);
@@ -25,11 +23,47 @@ $(document).ready(function() {
 	// This function grabs the items from the database and updates the html.
 	function getItems() {
 		$.get("/api/items", function(data) {
-			console.log("Items")
+			console.log(data);
+			initilizeRows(data);
 		})
-
 	}
 
+	// This function constructs a todo-item row
+	function createNewRow(items) {
+		var newInputRow = $("<tr>");
+		newInputRow.append("<td>" + items.name + "</td><td>" + items.email + "</td><td>" + items.message + "</td><td>" + items.createdAt + "</td>");
+
+		return newInputRow;
+	}
+
+
+
+
+	 // 	var newInputRow = $("<li>");
+	 // 	newInputRow.addClass("list-group-item todo-item");
+	 // 	var newTodoSpan = $("<span>");
+	 // 	newTodoSpan.text(todo.text);
+	 // 	newInputRow.append(newTodoSpan);
+	 // 	var newTodoInput = $("<input>");
+	 // 	newTodoInput.attr("type", "text");
+	 // 	newTodoInput.addClass("edit");
+	 // 	newTodoInput.css("display", "none");
+	 // 	newInputRow.append(newTodoInput);
+	 // 	var newDeleteBtn = $("<button>");
+	 // 	newDeleteBtn.addClass("delete btn btn-default");
+	 // 	newDeleteBtn.text("x");
+	 // 	newDeleteBtn.data("id", todo.id);
+	 // 	var newCompleteBtn = $("<button>");
+	 // 	newCompleteBtn.addClass("complete btn btn-default");
+	 // 	newCompleteBtn.text("✓");
+	 // 	newInputRow.append(newDeleteBtn);
+	 // 	newInputRow.append(newCompleteBtn);
+	 // 	newInputRow.data("todo", todo);
+	 // 	if (todo.complete) {
+	 // 		newTodoSpan.css("text-decoration", "line-through");
+	 // 	}
+	 // 	return newInputRow;
+	 // }
 
 
 

@@ -25,9 +25,10 @@ module.exports = function(sequelize, DataTypes) {
               allowNull: true
             }
           });
+          LenderBorrower.hasMany(models.Item);
         }
       }
     }
-    );
+  );
   return LenderBorrower;
 };

@@ -11,13 +11,18 @@ module.exports = function(app) {
 			query.borrowerId = req.query.borrowerId;
 		}
 		db.Item.findAll({
-			where: query
+			where: query,
+			include: [db.LenderBorrower]
 		}).then(function(dbItem) {
 			res.json(dbItem);	
 		});
 	});
 
-	// To post a new item.
+	// Get route for retrieving a single item post.
+	app.get("/api/items/:id")
+
+
+	// To post a new item.  This works.
 	app.post("/api/items", function(req, res) {
 		db.Item.create(req.body).then(function(dbItem) {
 			res.json(dbItem);
