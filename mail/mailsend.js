@@ -6,7 +6,7 @@ if(env === "development"){
 
 }
 // var port     = process.env.PORT || 8080;
-if (env === development){
+if (env === "development"){
 
 
 // create reusable transporter object using the default SMTP transport
