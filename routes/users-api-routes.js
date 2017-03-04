@@ -1,6 +1,6 @@
 var db = require("../models");
 
-module.exports = function(app) {
+module.exports = function(app, passport) {
 
 	// To get all the new items.
 	app.get("/api/users", function(req, res) {	
