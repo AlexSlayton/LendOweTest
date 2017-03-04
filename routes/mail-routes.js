@@ -10,6 +10,9 @@ var mail = require("../mail/mailsend.js");
 // Routes
 // =============================================================
 module.exports = function(app) {
+	app.get('/getmail', function(req, res){
+		res.send("hello world");
+	});
 	app.post('/sendmail', function(req, res){
 		// Lets store this info in the DB
 		// After its been stored, in the callback of the database request send the email below

@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "maury210",
+    "password": "AlexJenn1",
     "database": "lendowe_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "maury210",
+    "password": "AlexJenn1",
     "database": "lendowe_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "maury210",
+    "password": "AlexJenn1",
     "database": "lendowe_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

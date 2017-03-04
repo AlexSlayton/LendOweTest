@@ -46,6 +46,7 @@ require('./routes/html-routes.js')(app, passport);
 require('./routes/items-api-routes.js')(app, passport);
 require('./routes/lenderBorrower-api-routes.js')(app, passport);
 require('./routes/users-api-routes.js')(app, passport);
+require('./routes/mail-routes.js')(app);
 // sync
 db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
