@@ -6,11 +6,10 @@
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
-  background: url(../assets/img/shiplap.png);
   background-repeat: no-repeat;
 }
 p {
-  font-size: 20px;
+  font-size: 24px;
 }
 p.small {
   font-size: 16px;
@@ -22,9 +21,9 @@ a:active,
 a.active {
   color: none !important;
   outline: none;
+  text-decoration: none;
 }
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -32,6 +31,16 @@ h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+}
+h2{
+  font-family: Pacifico;
+  font-weight: 700; 
+  color: #ec9435;
+}
+.infoText{
+  font-family: 'Cabin Sketch', cursive;
+  color: black;
+  font-size: 20px;
 }
 hr.star-light,
 hr.star-primary {
@@ -74,7 +83,7 @@ hr.star-primary:after {
   position: absolute;
 }
 .img-responsive{
-  margin-top: 20px;
+  margin-top: 65px;
   margin-bottom: 0px;
 }
 header {
@@ -82,6 +91,8 @@ header {
   background: url(../assets/img/shiplap.png);
   background-size:cover;
   color: white;
+  padding-bottom: 150px;
+
 }
 header {
   text-align: center;
@@ -89,8 +100,8 @@ header {
   color: white;
 }
 header .container {
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 header img {
   display: block;
@@ -142,23 +153,40 @@ header .intro-text .skills {
   
   font-size: 100px;
   font-weight: bold;
-  font
 }
-#lend-section {
-  margin-top: 150px;
-}
-#owe-section {
-  margin-top: 150px;
-}
+
+.wrapper{
+  background: url(../assets/img/shiplap.png);
+  background-size:cover;
+  width:100%;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  }
+
+#lend-section,
+#owe-section,
 #login-section {
+  /*margin-top: 150px;*/
+  padding:16px;
+  border-radius:8px;
+  border:#ccc;
+  background: rgba(250,250,250,.75);
+}
+
+ {
   margin-top: 150px;
 }
-#Sign-Up-section {
-  margin-top: 150px;
+
+ {
+  margin-top: 50px;
 }
+
 @media (min-width: 768px) {
   header .container {
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 50px;
   }
   header .intro-text .name {
@@ -170,7 +198,8 @@ header .intro-text .skills {
 }
 .navbar-custom {
   background: #74aaba;
-  opacity: 0.7;
+  background-color: rgba(116, 170, 186, .7);
+  opacity: 1;
   font-family: Pacifico;
   font-size: 30px;
   font-weight: 500;
@@ -262,6 +291,17 @@ section.success {
   }
   section.first {
     padding-top: 75px;
+  }
+  p {
+    font-size: 17px;
+  }
+  .wrapper{
+  padding-top: 70px;
+  padding-left: 15px;
+  padding-right: 15px;
+  }
+  .infoText{
+    font-size: 10px;
   }
 }
 #portfolio .portfolio-item {
@@ -367,13 +407,15 @@ footer {
 footer h3 {
   margin-bottom: 30px;
 }
-footer .footer-above {
-  padding-top: 50px;
-  background-color: #74aaba;
-  opacity: 0.7;
+  footer .footer-above {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background-color: rgba(116, 170, 186, .8);
+  opacity: 1;
+  
 }
 footer .footer-col {
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 footer .footer-below {
   padding: 25px 0;
@@ -383,9 +425,10 @@ footer .footer-below {
 .btn-outline {
   color: white;
   font-size: 20px;
-  border: solid 2px white;
+  border: solid 5px white;
   background: transparent;
-  transition: all 0.3s ease-in-out;
+  background-color: #ec9435;
+  transition: all 0.4s ease-in-out;
   margin-top: 15px;
 }
 .btn-outline:hover,
@@ -528,7 +571,7 @@ fieldset[disabled] .btn-success.active {
   font-size: 3em;
 }
 .portfolio-modal .modal-content img {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 .portfolio-modal .modal-content .item-details {
   margin: 30px 0;
