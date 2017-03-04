@@ -401,6 +401,9 @@ section.success {
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
+.table {
+  margin-bottom: 300px;
+}
 footer {
   color: white;
 }
