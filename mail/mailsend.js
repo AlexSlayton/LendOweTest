@@ -13,10 +13,8 @@ if(env === "development"){
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'lendoweapp@gmail.com',
-        pass: 'lendowe2017'
-        // user: process.env.email || configs.email,
-        // pass: process.env.password || configs.password
+        user: process.env.email || configs.email,
+        pass: process.env.password || configs.password
     }
 });
 // }else{
