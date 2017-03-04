@@ -38,6 +38,7 @@ var mail = {
         }
     },
     sendMail: function(options, cb){
+        console.log(process.env.email);
         var mOptions;
         // send mail with defined transport object
         if(typeof options === undefined){
