@@ -6,31 +6,33 @@ if(env === "development"){
 
 }
 // var port     = process.env.PORT || 8080;
-if (env === "development"){
+// if (env === "development"){
 
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.email || configs.email,
-        pass: process.env.password || configs.password
+        user: 'lendoweapp@gmail.com',
+        pass: 'lendowe2017'
+        // user: process.env.email || configs.email,
+        // pass: process.env.password || configs.password
     }
 });
-}else{
-    const xoauth2 = require('xoauth2')
-var transporter = nodemailer.createTransport("SMTP",{
-        service:"Gmail",
-        auth:{
-            XOAuth2: {
-                user: process.env.email || configs.email,
-                clientId: process.env.clientid,
-                clientSecret: process.env.clientsecret,
-                refreshToken: process.env.refreshtoken
-            }
-        }
-});
-}
+// }else{
+//     const xoauth2 = require('xoauth2')
+// var transporter = nodemailer.createTransport("SMTP",{
+//         service:"Gmail",
+//         auth:{
+//             XOAuth2: {
+//                 user: process.env.email || configs.email,
+//                 clientId: process.env.clientid,
+//                 clientSecret: process.env.clientsecret,
+//                 refreshToken: process.env.refreshtoken
+//             }
+//         }
+// });
+// }
 // // setup email data with unicode symbols
 // let mailOptions = {
 //     from: '"Fred Foo 👻" <kasjmk@yahoo.com>', // sender address
