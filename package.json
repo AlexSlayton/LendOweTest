@@ -1,8 +1,12 @@
 {
-  "name": "IOU APP",
+  "name": "iouapp",
   "title": "IOU",
   "version": "3.3.7+1",
   "homepage": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "AAT",
   "license": {
     "type": "MIT",

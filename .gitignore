@@ -5,3 +5,5 @@ holdingFile
 gulpfile.js
 
 .DS_Store
+
+nodemailerConfig.js
